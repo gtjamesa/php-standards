@@ -1,0 +1,14 @@
+{
+  "name": "gtjamesa/php-standards",
+  "description": "James' shared PHP style rules for PHP-CS-Fixer",
+  "license": "MIT",
+  "require": {
+    "php": "^7.0",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "autoload": {
+    "files": [
+      "./src/helpers.php"
+    ]
+  }
+}
