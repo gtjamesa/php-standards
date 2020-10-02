@@ -4,24 +4,13 @@ This package defines my [`FriendsOfPHP/PHP-CS-Fixer`](https://github.com/Friends
 
 ## Usage
 
-Add this repository URL to your `composer.json`
-
-```json
-"repositories": [
-    {
-        "type": "git",
-        "url": "https://github.com/gtjamesa/php-standards.git"
-    }
-],
-```
-
-Next, require `php-cs-fixer` and `php-standards`:
+Install the package by requiring `php-cs-fixer` and `php-standards`:
 
 ```bash
 composer require --dev friendsofphp/php-cs-fixer gtjamesa/php-standards
 ```
 
-Finally, create a `.php_cs.dist` file in the root of your project with the following content:
+Next, create a `.php_cs.dist` file in the root of your project with the following content:
 
 ```php
 <?php
