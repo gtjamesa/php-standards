@@ -3,8 +3,8 @@
   "description": "James' shared PHP style rules for PHP-CS-Fixer",
   "license": "MIT",
   "require": {
-    "php": "^7.0",
-    "friendsofphp/php-cs-fixer": "^2.16"
+    "php": "^7.0|^8.0",
+    "friendsofphp/php-cs-fixer": "^2.19"
   },
   "autoload": {
     "files": [
