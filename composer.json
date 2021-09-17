@@ -4,7 +4,7 @@
   "license": "MIT",
   "require": {
     "php": "^7.0|^8.0",
-    "friendsofphp/php-cs-fixer": "^2.19"
+    "friendsofphp/php-cs-fixer": "^3.0"
   },
   "autoload": {
     "files": [

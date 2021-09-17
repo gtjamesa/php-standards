@@ -10,7 +10,7 @@ Install the package by requiring `php-cs-fixer` and `php-standards`:
 composer require --dev friendsofphp/php-cs-fixer gtjamesa/php-standards
 ```
 
-Next, create a `.php_cs.dist` file in the root of your project with the following content:
+Next, create a [`.php-cs-fixer.dist.php`](https://raw.githubusercontent.com/gtjamesa/php-standards/master/.php-cs-fixer.dist.php) file in the root of your project with the following content:
 
 ```php
 <?php
@@ -39,6 +39,13 @@ return JamesAusten\styles($finder);
 ```
 
 *The file above assumes a Laravel project, but the configuration can be edited for any PHP 7.0+ project.*
+
+Add the following entries to your `.gitignore` file:
+
+```
+.php_cs.cache
+.php-cs-fixer.cache
+```
 
 ### Configuration
 

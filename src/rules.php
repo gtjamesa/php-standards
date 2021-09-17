@@ -4,6 +4,7 @@
  * PHP-CS-Fixer configuration
  *
  * @see https://mlocati.github.io/php-cs-fixer-configurator/
+ * @see https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200
  */
 return [
     'array_indentation' => true,
@@ -20,9 +21,17 @@ return [
     'braces' => true,
     'cast_spaces' => ['space' => 'none'],
     'class_attributes_separation' => [
-        'elements' => ['method'],
+        'elements' => [
+            'const' => 'one',
+            'method' => 'one',
+            'property' => 'one',
+        ],
     ],
-    'class_definition' => true,
+    'class_definition' => [
+        'multi_line_extends_each_single_line' => true,
+        'single_item_single_line' => true,
+        'single_line' => true,
+    ],
     'concat_space' => ['spacing' => 'one'],
     'declare_equal_normalize' => true,
     'elseif' => true,
@@ -35,20 +44,17 @@ return [
     'include' => true,
     'increment_style' => ['style' => 'post'],
     'indentation_type' => true,
-    'is_null' => ['use_yoda_style' => false],
+    'is_null' => ['yoda_style' => false],
     'linebreak_after_opening_tag' => true,
     'line_ending' => true,
     'list_syntax' => ['syntax' => 'short'],
     'lowercase_cast' => true,
-    'lowercase_constants' => true,
+    'constant_case' => ['case' => 'lower'],
     'lowercase_keywords' => true,
     'lowercase_static_reference' => true, // added from Symfony
     'magic_method_casing' => true, // added from Symfony
     'magic_constant_casing' => true,
-    'method_argument_space' => [
-        'on_multiline' => 'ensure_fully_multiline',
-        'keep_multiple_spaces_after_comma' => true,
-    ],
+    'method_argument_space' => true,
     'native_function_casing' => true,
     'no_alias_functions' => true,
     'no_extra_blank_lines' => [
@@ -64,7 +70,7 @@ return [
     'no_closing_tag' => true,
     'no_empty_phpdoc' => true,
     'no_empty_statement' => true,
-    'no_leading_import_slash' => false,
+    'no_leading_import_slash' => true,
     'no_leading_namespace_whitespace' => true,
     'no_mixed_echo_print' => [
         'use' => 'echo',
@@ -76,13 +82,17 @@ return [
     'no_short_bool_cast' => true,
     'no_singleline_whitespace_before_semicolons' => true,
     'no_spaces_after_function_name' => true,
-    'no_spaces_around_offset' => true,
+    'no_spaces_around_offset' => [
+        'positions' => ['inside', 'outside'],
+    ],
     'no_spaces_inside_parenthesis' => true,
     'no_trailing_comma_in_list_call' => true,
     'no_trailing_comma_in_singleline_array' => true,
     'no_trailing_whitespace' => true,
     'no_trailing_whitespace_in_comment' => true,
-    'no_unneeded_control_parentheses' => true,
+    'no_unneeded_control_parentheses' => [
+        'statements' => ['break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'],
+    ],
     'no_unreachable_default_argument_value' => true,
     'no_useless_return' => true,
     'no_whitespace_before_comma_in_array' => true,
@@ -90,9 +100,9 @@ return [
     'normalize_index_brace' => true,
     'not_operator_with_successor_space' => false,
     'object_operator_without_whitespace' => true,
-    'ordered_imports' => ['sortAlgorithm' => 'alpha'],
+    'ordered_imports' => ['sort_algorithm' => 'alpha'],
     'phpdoc_indent' => true,
-    'phpdoc_inline_tag' => true,
+    'phpdoc_inline_tag_normalizer' => true,
     'phpdoc_no_access' => true,
     'phpdoc_no_package' => true,
     'phpdoc_no_useless_inheritdoc' => true,
@@ -100,10 +110,11 @@ return [
     'phpdoc_single_line_var_spacing' => true,
     'phpdoc_summary' => false,
     'phpdoc_to_comment' => false,
+    'phpdoc_tag_type' => ['inheritdoc' => 'inline'],
     'phpdoc_trim' => true,
     'phpdoc_types' => true,
     'phpdoc_var_without_name' => true,
-    'psr4' => true,
+    'psr_autoloading' => true,
     'self_accessor' => true,
     'short_scalar_cast' => true,
     'simplified_null_return' => false, // disabled by Shift
@@ -122,7 +133,7 @@ return [
     'switch_case_space' => true,
     'ternary_operator_spaces' => true,
     'ternary_to_null_coalescing' => true,
-    'trailing_comma_in_multiline_array' => true,
+    'trailing_comma_in_multiline' => ['elements' => ['arrays']],
     'trim_array_spaces' => true,
     'unary_operator_spaces' => true,
     'visibility_required' => [

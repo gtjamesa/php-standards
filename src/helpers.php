@@ -20,7 +20,7 @@ function styles(Finder $finder, array $rules = [], bool $cache = true): Config
 {
     $rules = array_merge(require __DIR__ . '/rules.php', $rules);
 
-    return Config::create()
+    return (new Config())
         ->setFinder($finder)
         ->setRiskyAllowed(true)
         ->setRules($rules)
