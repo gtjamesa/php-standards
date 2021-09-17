@@ -22,15 +22,15 @@ return [
     'cast_spaces' => ['space' => 'none'],
     'class_attributes_separation' => [
         'elements' => [
-            'const' => 'one',
+//            'const' => 'one',
             'method' => 'one',
-            'property' => 'one',
+//            'property' => 'one',
         ],
     ],
     'class_definition' => [
         'multi_line_extends_each_single_line' => true,
         'single_item_single_line' => true,
-        'single_line' => true,
+        'single_line' => false,
     ],
     'concat_space' => ['spacing' => 'one'],
     'declare_equal_normalize' => true,
@@ -44,7 +44,7 @@ return [
     'include' => true,
     'increment_style' => ['style' => 'post'],
     'indentation_type' => true,
-    'is_null' => ['yoda_style' => false],
+    'is_null' => true,
     'linebreak_after_opening_tag' => true,
     'line_ending' => true,
     'list_syntax' => ['syntax' => 'short'],
@@ -110,7 +110,9 @@ return [
     'phpdoc_single_line_var_spacing' => true,
     'phpdoc_summary' => false,
     'phpdoc_to_comment' => false,
-    'phpdoc_tag_type' => ['inheritdoc' => 'inline'],
+    'phpdoc_tag_type' => [
+        'tags' => ['inheritdoc' => 'inline'],
+    ],
     'phpdoc_trim' => true,
     'phpdoc_types' => true,
     'phpdoc_var_without_name' => true,
